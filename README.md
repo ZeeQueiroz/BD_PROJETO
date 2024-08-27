@@ -1,6 +1,6 @@
 # Contexto
 
-Neste repositório você encontrar um modelo de Banco de Dados para um Wiki de Animes e Mangás.
+Neste repositório você vai encontrar um modelo de Banco de Dados para um Wiki de Animes e Mangás.
 
 # Conteúdos:
 ↪︎ Modelo Relacional;
