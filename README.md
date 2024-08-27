@@ -11,4 +11,4 @@ Neste repositório você encontrar um modelo de Banco de Dados para um Wiki de A
 
 # Idealizado por:
 
-Nome: José Vitor Salles Queiroz              R.A: 010623034
+Nome: José Vitor Salles Queiroz                   R.A: 010623034
