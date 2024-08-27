@@ -4,6 +4,7 @@ Neste repositório você encontrar um modelo de Banco de Dados para um Wiki de A
 
 # Conteúdos:
 ↪︎ Modelo Relacional;
+
 ↪︎ Script SQL;
 
 ![MODELO RELACIONAL](https://github.com/user-attachments/assets/384ad782-cce6-44ec-9697-79701a0b2dc9)
