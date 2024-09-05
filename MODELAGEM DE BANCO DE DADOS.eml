@@ -1,0 +1,142 @@
+Delivered-To: josevitorsallesqueiroz@gmail.com
+Received: by 2002:a05:6a11:441d:b0:59e:ade3:999 with SMTP id mb29csp2668215pxb;
+        Tue, 3 Sep 2024 17:08:05 -0700 (PDT)
+X-Received: by 2002:a05:6214:5c44:b0:6bb:b238:bc66 with SMTP id 6a1803df08f44-6c3c62a4c35mr68373776d6.26.1725408485518;
+        Tue, 03 Sep 2024 17:08:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1725408485; cv=none;
+        d=google.com; s=arc-20160816;
+        b=NwYX4y8vVpZCXKxjnZro6SV76kt2lvL7I2Y3Y9eKGHxDwp8CdboOqrf4QBZeFlylXa
+         jnT51+Pi/2vtWA/60iClAtlhHR/v9z/9KcrxXLE72VR8KSWrL4BS2xLBB3JYbw23plKv
+         Ixg3B67UJuWUZzmott4ycGY5Puhr4e7ePaDSq2w5jkfgOwQuS5M7GAmPrt72FFacPoCn
+         cQzkRrOR64TFHpD063lAfTx3TZDp72W0zngpehJHO89aSifxHag9fpJDYrUTl8fp9aBG
+         I89nzXRD6vS+/9jxyXaq3EOotfez8jSsZaPCHwiZSc6Xy2SBRW8lvYRzvc0cuRPN7kEa
+         WK3A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=2Gc+pEOmLGTF/1cGbDUmkcgJRyk85T0YIwfx953HXcE=;
+        fh=DYL4rJ6uR5tDqEkbQABtsXy4XR7SQNCX+EUuNGmp9ms=;
+        b=edKzoTyytbGm2MOaXxGq6eAem1AqMkyuPn7IOhncq0ddy4iCLV9APn6Za7eQAS6EBV
+         5QvwHvIQG0hadVuKBS5zO3zdY/tzxEgpdeyqQSz63bSABS3XRgFceU0oUcL8h3mkra7d
+         y4pdmIVX9sHIGoTFeM6F9O411j++KxshCDFSTlPRE11GurGcyV71J4m1rXXGXwOVprxu
+         Cv+HWuqYwvr8Oavj+H1zzz6JmZnjcGjkNS4yKmQRklDbAEHIRFXf0S5BawVCDHw762UV
+         CunRfG0bkrjLqCS8KQcdQCfuf2dzBoM4dE/yL2aEoVSIDC0yXPy8MHNwJNzdUfuE1Itj
+         yMeQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DpLPUuvM;
+       spf=pass (google.com: domain of rodrigo.noescobar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rodrigo.noescobar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <rodrigo.noescobar@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 6a1803df08f44-6c50edfb90bsor12182356d6.5.2024.09.03.17.08.05
+        for <josevitorsallesqueiroz@gmail.com>
+        (Google Transport Security);
+        Tue, 03 Sep 2024 17:08:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of rodrigo.noescobar@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DpLPUuvM;
+       spf=pass (google.com: domain of rodrigo.noescobar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rodrigo.noescobar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1725408485; x=1726013285; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2Gc+pEOmLGTF/1cGbDUmkcgJRyk85T0YIwfx953HXcE=;
+        b=DpLPUuvMg8FYgo2QpwjweB+NwNur7H0yNYFa0119u9x9UowPmqQOlLRmvR7PZaMRpF
+         DNwQkZP7Zz2K+3u84tj0x+viGyRSLFE/FqjueXz1rERxaQVCr1Y+a/l7x9iKbcsQ+Efc
+         93meYoT0ohwZOgsthiyNl+rAMsUwAMNQjdig0YaYufpdHYN6fPOd3c1isZT2sXH8t5bp
+         EhKyc92fEDWYV4x/iH557W0DrEa3PhD1lke4LLdSqSd2kBIBfnmz/IxSV28JiIFqB8Ia
+         PDg/LCAvY7JahOR/teMn4+7Zl8FjjSRjlAlDUjIeDCzHRbtKr7KN2TEWVwjoe6m06z/n
+         i0gg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1725408485; x=1726013285;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=2Gc+pEOmLGTF/1cGbDUmkcgJRyk85T0YIwfx953HXcE=;
+        b=i9wet68URhitX6Hm05g0YLsl0mJqgtjuz9YhaZU7fzxuyF6s95HYBeeeArLiq18xxC
+         SmGpOf3nNqlmYBGm7ACouJdbPSR5rLOKZU2L1Vj6E3aXsMq2Oh15sLEzxhto0EpIEOTJ
+         JNlUDriM3WxASa0RlyO2jtWR6iPavqH8YM20C7TPX/27pYvxskBLwf1oDX5nx0n0fw+7
+         vNw2OKwSZ+7PyBfqR9sTzP3JuzwObpFCXD0D7s8Ox5JzjBl33rRtSn1jqJYYxiG2mnth
+         u4nA7KG8wftUpcVknm8BLVDuDZrfBTcst9zu7Omou4Hn3v8r/GDvfsant81re4q3xl7i
+         g5bg==
+X-Gm-Message-State: AOJu0Yyw+NrGjw/Tr3jO6GF8fqQ7JBEwKvQydF+RLxQpTgfBgWu7PhOE
+	Jd6vTmysWT3YUJTI4gC2n759uFBnzLcXTKiIQCMY4Ec7tCW2i1qGrJz2drS4mAFEAVtoCBRZDNy
+	qP50f1Qw5HdYvAB8TUbXzh0mA06nh9w==
+X-Google-Smtp-Source: AGHT+IHEwTq/DcMXIm6ZezcG+NIEZQDFJ8gFP165rRO2dOJTvaADb/e8hbgS+trpUcIVS5+Xr3ooPvnpnKx1TICgBZA=
+X-Received: by 2002:a05:6214:588e:b0:6c3:5926:a070 with SMTP id
+ 6a1803df08f44-6c3c62b3069mr45457686d6.30.1725408484712; Tue, 03 Sep 2024
+ 17:08:04 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAH7eeFehzAXwtQVCLEdirWkEoK_QMAAUc=kNkff97gW1++9X2Q@mail.gmail.com>
+In-Reply-To: <CAH7eeFehzAXwtQVCLEdirWkEoK_QMAAUc=kNkff97gW1++9X2Q@mail.gmail.com>
+From: Rodrigo Escobar <rodrigo.noescobar@gmail.com>
+Date: Tue, 3 Sep 2024 21:08:12 -0300
+Message-ID: <CA+Lz0fRVNXX8Ue3J5B+g=yK8jDopWHBP8Rz3BUc6NfmH6mTfWg@mail.gmail.com>
+Subject: Re: MODELAGEM DE BANCO DE DADOS
+To: =?UTF-8?B?Sm9zw6kgVsOtdG9y?= <josevitorsallesqueiroz@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000d2e6ab06213ff757"
+
+--000000000000d2e6ab06213ff757
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa noite,
+
+As tabelas Anime e Manga passam a ser apenas uma. Adicionar campo TIPO 0 =
+=3D
+manga e 1 =3D anime
+
+Users e moderadores se juntam e o cargo passa a ser um n=C3=BAmero, por exe=
+mplo
+0 Admin e 5 usuario comum
+
+Anexar ese email no git
+
+*Rodrigo Escobar*
+
+*rodrigo.noescobar@gmail.com <rodrigo.noescobar@gmail.com>*
+
+
+Em ter., 27 de ago. de 2024 =C3=A0s 21:09, Jos=C3=A9 V=C3=ADtor <
+josevitorsallesqueiroz@gmail.com> escreveu:
+
+> Professor, boa noite
+>
+> Nome: Jos=C3=A9 Vitor Salles Queiroz
+> R.A: 010623034
+>
+> LINK: https://github.com/ZeeQueiroz/BD_PROJETO.git
+>
+> Atenciosamente,
+> Jos=C3=A9 Vitor
+>
+
+--000000000000d2e6ab06213ff757
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Boa noite,</div><div><br></div><div>As tabelas Anime =
+e Manga passam a ser apenas uma. Adicionar campo TIPO 0 =3D manga e 1 =3D a=
+nime</div><div><br></div><div>Users e moderadores se juntam e o cargo passa=
+ a ser um n=C3=BAmero, por exemplo 0 Admin e 5 usuario comum</div><div><br>=
+</div><div>Anexar ese email no git <br></div><div><br></div><div><div><div =
+dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><i=
+ style=3D"color:rgb(0,0,153)"><b>Rodrigo Escobar</b></i><br><b><font size=
+=3D"1"><a href=3D"mailto:rodrigo.noescobar@gmail.com" target=3D"_blank">rod=
+rigo.noescobar@gmail.com</a><br></font></b><br></div></div><br></div></div>=
+<br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em ter=
+., 27 de ago. de 2024 =C3=A0s 21:09, Jos=C3=A9 V=C3=ADtor &lt;<a href=3D"ma=
+ilto:josevitorsallesqueiroz@gmail.com">josevitorsallesqueiroz@gmail.com</a>=
+&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0=
+px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><=
+div dir=3D"ltr">Professor, boa=C2=A0noite<div><br>Nome: Jos=C3=A9 Vitor Sal=
+les Queiroz<br>R.A: 010623034<br><div><br></div><div>LINK: <a href=3D"https=
+://github.com/ZeeQueiroz/BD_PROJETO.git" target=3D"_blank">https://github.c=
+om/ZeeQueiroz/BD_PROJETO.git</a><br><br>Atenciosamente,</div></div><div>Jos=
+=C3=A9 Vitor</div></div>
+</blockquote></div>
+
+--000000000000d2e6ab06213ff757--
