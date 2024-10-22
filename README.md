@@ -11,7 +11,7 @@ Neste repositório você vai encontrar um modelo de Banco de Dados para um Wiki 
 
 # Novo modelo Relacional
 
-(![novomodelo](https://github.com/user-attachments/assets/0c4890c5-ab5a-4182-b5e2-5bd7444312c4)
+![novomodelo](https://github.com/user-attachments/assets/0c4890c5-ab5a-4182-b5e2-5bd7444312c4)
 
 
 
